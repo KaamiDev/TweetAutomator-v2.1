@@ -73,3 +73,20 @@ button:hover {
 .login-btn {
 	margin-top: 12px;
 }
+
+#footer-text {
+	text-align: center;
+}
+
+.footer-link {
+	color: #0aff02;
+}
+
+.content-section {
+	min-height: calc(100vh - 300px);
+	padding-bottom: 30px;
+}
+
+::placeholder {
+	color: #0aff024f;
+}
