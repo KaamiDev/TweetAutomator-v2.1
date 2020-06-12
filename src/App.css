@@ -60,6 +60,7 @@ button {
 	padding: 5px 40px;
 	color: #0aff02;
 	border-radius: 25px;
+	font-family: 'Arvo', serif;
 	cursor: pointer;
 }
 
@@ -81,6 +82,9 @@ button:hover {
 
 .content-section {
 	min-height: calc(100vh - 300px);
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
 	padding-bottom: 30px;
 }
 
@@ -91,4 +95,115 @@ button:hover {
 #header-title a {
 	color: #0aff02;
 	text-decoration: none;
+}
+
+.accounts-card {
+	background-color: #313131;
+	margin-right: 40px;
+	width: 40%;
+	padding: 30px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.profile-option-row {
+	margin-right: 40px;
+	width: 20%;
+}
+
+.profile-card {
+	margin-bottom: 20px;
+	background-color: #313131;
+	padding: 30px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.options-card {
+	background-color: #313131;
+	padding: 30px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.bot-stat-text {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin-top: 5px;
+}
+
+.bot-stat-text li {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 12px;
+}
+
+.manage-bot-title {
+	margin-bottom: 0;
+}
+
+.accounts-btn {
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-right: 5px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.accounts-search {
+	text-align: left;
+	margin: 0;
+	margin-right: 10px;
+	padding-left: 15px;
+	width: 50%;
+}
+
+.search-container {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.account-buttons-container {
+	margin-bottom: 20px;
+}
+
+.accounts-table-container {
+	padding-top: 20px;
+}
+
+.accounts-table {
+	width: 100%;
+}
+
+.accounts-table tr,
+.accounts-table td,
+.accounts-table th {
+	outline: 3px solid #0aff02;
+	padding: 5px;
+}
+
+.accounts-table th {
+	padding: 10px;
+}
+
+.yellow-link {
+	color: #a9ff02;
+}
+
+.status-active {
+	color: #0aff02;
+}
+
+.status-err {
+	color: #ffd702;
+}
+
+.all-accs-link {
+	margin-top: 25px;
+	display: block;
 }
