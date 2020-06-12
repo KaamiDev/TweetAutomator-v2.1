@@ -108,15 +108,17 @@ button:hover {
 
 .profile-option-row {
 	margin-right: 40px;
-	width: 20%;
+	width: 23%;
 }
 
 .profile-card {
 	margin-bottom: 20px;
 	background-color: #313131;
 	padding: 30px;
-	text-align: center;
-	padding-bottom: 40px;
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	vertical-align: middle;
 }
 
 .options-card {
@@ -206,4 +208,32 @@ button:hover {
 .all-accs-link {
 	margin-top: 25px;
 	display: block;
+}
+
+.profile-image {
+	width: 40px;
+}
+
+.user-text-container {
+	margin-left: 10px;
+	padding-top: 3px;
+}
+
+.profile-username {
+	margin-bottom: 2px;
+}
+
+.profile-description {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 12px;
+}
+
+.profile-stuff-container {
+	display: flex;
+}
+
+.logout-btn {
+	font-size: 12px;
+	margin-top: 6px;
 }

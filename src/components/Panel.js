@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileIcon from '../profile-icon.svg';
 
 const Panel = () => {
 	return (
@@ -118,7 +119,16 @@ const Panel = () => {
 			</div>
 			<div className="profile-option-row">
 				<div className="profile-card">
-					<p>Hello</p>
+					<div className="profile-stuff-container">
+						<img className="profile-image" src={ProfileIcon} />
+						<div className="user-text-container">
+							<h4 className="card-title profile-username">KaamiDev</h4>
+							<p className="profile-description">User</p>
+						</div>
+					</div>
+					<div className="profile-button-container">
+						<button className="logout-btn">Logout</button>
+					</div>
 				</div>
 				<div className="options-card">
 					<p>Hello</p>
