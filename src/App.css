@@ -90,3 +90,8 @@ button:hover {
 ::placeholder {
 	color: #0aff024f;
 }
+
+#header-title a {
+	color: #0aff02;
+	text-decoration: none;
+}
