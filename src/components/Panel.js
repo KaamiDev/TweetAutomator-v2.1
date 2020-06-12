@@ -1,7 +1,14 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import ProfileIcon from '../profile-icon.svg';
 
 const Panel = () => {
+	let history = useHistory();
+
+	const handleLogout = () => {
+		history.push('/login');
+	};
+
 	return (
 		<div className="content-section">
 			<div className="accounts-card">
@@ -127,7 +134,9 @@ const Panel = () => {
 						</div>
 					</div>
 					<div className="profile-button-container">
-						<button className="logout-btn">Logout</button>
+						<button onClick={handleLogout} className="logout-btn">
+							Logout
+						</button>
 					</div>
 				</div>
 				<div className="options-card">
