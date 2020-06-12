@@ -31,12 +31,9 @@ body {
 	width: 20%;
 	margin: 0 auto;
 	padding: 30px;
-}
-
-.login-card {
 	text-align: center;
+	padding-bottom: 40px;
 }
-
 .card-title {
 	font-weight: normal;
 	font-size: 15px;
