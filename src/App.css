@@ -25,3 +25,51 @@ body {
 	font-weight: normal;
 	margin-top: 0;
 }
+
+.login-card {
+	background-color: #313131;
+	width: 20%;
+	margin: 0 auto;
+	padding: 30px;
+}
+
+.login-card {
+	text-align: center;
+}
+
+.card-title {
+	font-weight: normal;
+	font-size: 15px;
+	margin-top: 0;
+}
+
+input {
+	border: 3px solid #0aff02;
+	outline: none;
+	text-align: center;
+	padding: 5px;
+	display: block;
+	background-color: transparent;
+	margin: 10px auto;
+	width: 92%;
+	font-family: 'Arvo', serif;
+	color: #fff;
+}
+
+button {
+	background-color: transparent;
+	outline: none;
+	border: 3px solid #0aff02;
+	padding: 5px 40px;
+	color: #0aff02;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #76fd712f;
+}
+
+.login-btn {
+	margin-top: 12px;
+}
