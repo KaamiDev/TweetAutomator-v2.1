@@ -1,5 +1,4 @@
 import React from 'react';
-import ProfileCard from './ProfileCard';
 import AdminAccessCard from './AdminAccessCard';
 import AdminAddAccess from './AdminAddAccess';
 
