@@ -257,3 +257,7 @@ button:hover {
 	border-color: #a9ff02;
 	font-weight: bold;
 }
+
+.manage-access-description {
+	margin-bottom: 10px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import ProfileIcon from '../profile-icon.svg';
 
 const ProfileCard = () => {
@@ -15,7 +15,12 @@ const ProfileCard = () => {
 				<img className="profile-image" alt="pfp" src={ProfileIcon} />
 				<div className="user-text-container">
 					<h4 className="card-title profile-username">KaamiDev</h4>
-					<p className="profile-description">User</p>
+					<p className="profile-description">
+						{/* User */}
+						<Link className="yellow-link" to="/admin">
+							Admin
+						</Link>
+					</p>
 				</div>
 			</div>
 			<div className="profile-button-container">
