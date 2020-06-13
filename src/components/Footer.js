@@ -10,7 +10,7 @@ const Footer = () => {
 		<div id="footer">
 			<p id="footer-text">
 				&copy; <span id="footer-year">2020</span> TweetAutomator by{' '}
-				<a className="footer-link" href="https://kaamidev.com" target="_blank">
+				<a className="footer-link" href="https://kaamidev.com" rel="noopener noreferrer" target="_blank">
 					Kaami
 				</a>
 			</p>
