@@ -1,23 +1,27 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KaamiDev/tweetautomator-backend.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KaamiDev/tweetautomator-backend/issues"
-  },
-  "homepage": "https://github.com/KaamiDev/tweetautomator-backend#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app",
+		"dev": "nodemon app"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KaamiDev/tweetautomator-backend.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/KaamiDev/tweetautomator-backend/issues"
+	},
+	"homepage": "https://github.com/KaamiDev/tweetautomator-backend#readme",
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.4"
+	}
 }
