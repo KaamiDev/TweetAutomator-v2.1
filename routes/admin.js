@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 	res.send('Admin');
 });
 
-router.post('/addUser', (req, res) => {
+router.post('/add-user', (req, res) => {
 	if (req.body.username && req.body.password && req.body.confirmpassword) {
 		if (!db.accounts.findOne({ username: req.body.username.toLowerCase() })) {
 			let user = {
