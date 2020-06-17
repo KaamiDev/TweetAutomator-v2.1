@@ -14,6 +14,8 @@ router.post('/', (req, res) => {
 		} else {
 			res.status(200).send('Invalid Credentials.');
 		}
+	} else {
+		res.status(200).send('Missing fields.');
 	}
 });
 
