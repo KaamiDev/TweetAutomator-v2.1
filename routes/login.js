@@ -2,10 +2,6 @@ const express = require('express');
 const db = require('diskdb');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-	res.send('Login');
-});
-
 router.post('/', (req, res) => {
 	if (req.body.username && req.body.password) {
 		let user = db.users.findOne({ username: req.body.username.toLowerCase(), password: req.body.password });

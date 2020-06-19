@@ -2,10 +2,6 @@ const express = require('express');
 const db = require('../database/dbconfig');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-	res.send('Admin');
-});
-
 router.post('/add-user', (req, res) => {
 	if (req.body.username && req.body.password && req.body.confirmpassword) {
 		if (!db.accounts.findOne({ username: req.body.username.toLowerCase() })) {
