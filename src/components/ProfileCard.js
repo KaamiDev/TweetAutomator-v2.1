@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import ProfileIcon from '../profile-icon.svg';
 
-const ProfileCard = () => {
+const ProfileCard = (props) => {
 	let history = useHistory();
 
 	const handleLogout = () => {
@@ -14,7 +14,9 @@ const ProfileCard = () => {
 			<div className="profile-stuff-container">
 				<img className="profile-image" alt="pfp" src={ProfileIcon} />
 				<div className="user-text-container">
-					<h4 className="card-title profile-username">KaamiDev</h4>
+					<h4 className="card-title profile-username" style={{ textTransform: 'capitalize' }}>
+						{props.username}
+					</h4>
 					<p className="profile-description">
 						{/* User */}
 						<Link className="yellow-link" to="/admin">
