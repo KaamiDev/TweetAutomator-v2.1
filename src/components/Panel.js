@@ -35,10 +35,10 @@ const Panel = () => {
 
 	return (
 		<div className="content-section" style={{ display: username ? '' : 'none' }}>
-			<AccountCard />
+			<AccountCard accounts={accounts} />
 			<div className="profile-option-row">
 				<ProfileCard username={username} />
-				<OptionsCard />
+				<OptionsCard accounts={accounts} />
 			</div>
 		</div>
 	);

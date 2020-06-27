@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AccountCard = () => {
+const AccountCard = (props) => {
 	return (
 		<div className="accounts-card">
 			<h4 className="card-title manage-bot-title">Manage Bot Accounts</h4>
