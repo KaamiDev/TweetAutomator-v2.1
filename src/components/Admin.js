@@ -21,7 +21,7 @@ const Admin = () => {
 					setUsers(response.data.users);
 				}
 			} catch (err) {
-				if (err.response.satus === 401) {
+				if (err.response.status === 401) {
 					history.push('/');
 				}
 			}
