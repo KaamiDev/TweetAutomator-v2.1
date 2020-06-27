@@ -8,10 +8,10 @@ router.post('/', (req, res) => {
 		if (user) {
 			res.status(200).send(user._id);
 		} else {
-			res.status(200).send('Invalid Credentials.');
+			res.status(400).send('Invalid Credentials.');
 		}
 	} else {
-		res.status(200).send('Missing fields.');
+		res.status(400).send('Missing fields.');
 	}
 });
 
