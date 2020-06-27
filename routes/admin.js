@@ -8,7 +8,7 @@ router.get('/', userAuth, adminAuth, (req, res) => {
 	res.status(200).send({ users });
 });
 
-router.post('/add-user', (req, res) => {
+router.post('/add-user', userAuth, adminAuth, (req, res) => {
 	if (req.body.username && req.body.password && req.body.confirmPassword) {
 		if (req.body.password === req.body.confirmPassword) {
 			if (!db.users.findOne({ username: req.body.username.toLowerCase() })) {
