@@ -13,6 +13,7 @@ const AdminAddAccess = (props) => {
 
 	const handleChange = (e) => {
 		setErrMessage('');
+		setSuccessMessage('');
 		switch (e.target.id) {
 			case 'username':
 				setUsername(e.target.value);
