@@ -1,21 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
 	let history = useHistory();
 
+	const [ username, setUsername ] = useState('');
+	const [ password, setPassword ] = useState('');
+	const [ errMessage, setErrMessage ] = useState('');
+
+	const handleChange = (e) => {
+		setErrMessage('');
+		switch (e.target.id) {
+			case 'username':
+				setUsername(e.target.value);
+				break;
+			case 'password':
+				setPassword(e.target.value);
+				break;
+			default:
+				break;
+		}
+	};
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		history.push('/');
+		setErrMessage('');
+		const login = async () => {
+			try {
+				let response = await axios.post('http://localhost:5000/login', { username, password });
+				if (response.status === 200) {
+					localStorage.setItem('authtoken', response.data);
+					history.push('/');
+				}
+			} catch (err) {
+				if (err.response.status === 400) {
+					setErrMessage(err.response.data);
+				}
+			}
+		};
+		login();
 	};
 
 	return (
 		<div className="content-section">
 			<div className="login-card">
 				<h4 className="card-title">Authenticate Below.</h4>
+				<p style={{ fontSize: '12px', color: 'red' }}>{errMessage}</p>
 				<form onSubmit={handleSubmit}>
-					<input type="text" placeholder="Username" autoComplete="off" id="username" />
-					<input type="password" placeholder="Password" id="password" />
+					<input
+						type="text"
+						placeholder="Username"
+						onChange={handleChange}
+						autoComplete="off"
+						value={username}
+						id="username"
+					/>
+					<input
+						type="password"
+						placeholder="Password"
+						onChange={handleChange}
+						value={password}
+						id="password"
+					/>
 					<button type="submit" className="login-btn">
 						Login
 					</button>
