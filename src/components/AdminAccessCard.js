@@ -10,56 +10,60 @@ const AdminAccessCard = () => {
 
 			<div className="accounts-table-container">
 				<table className="accounts-table">
-					<tr>
-						<th>Username</th>
-						<th>Password</th>
-						<th>Action(s)</th>
-					</tr>
-					<tr>
-						<td>KaamiDev</td>
-						<td className="status-active">********</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>KaamiDev</td>
-						<td className="status-active">********</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>KaamiDev</td>
-						<td className="status-active">********</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>KaamiDev</td>
-						<td className="status-active">********</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>KaamiDev</td>
-						<td className="status-active">********</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
+					<thead>
+						<tr>
+							<th>Username</th>
+							<th>Password</th>
+							<th>Action(s)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>KaamiDev</td>
+							<td className="status-active">********</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>KaamiDev</td>
+							<td className="status-active">********</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>KaamiDev</td>
+							<td className="status-active">********</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>KaamiDev</td>
+							<td className="status-active">********</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>KaamiDev</td>
+							<td className="status-active">********</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+					</tbody>
 				</table>
 			</div>
 		</div>
