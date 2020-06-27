@@ -6,6 +6,7 @@ const ProfileCard = (props) => {
 	let history = useHistory();
 
 	const handleLogout = () => {
+		localStorage.clear();
 		history.push('/login');
 	};
 
