@@ -1,6 +1,12 @@
 const express = require('express');
 const db = require('../database/dbconfig');
+const { userAuth, adminAuth } = require('./userAuth');
 const router = express.Router();
+
+router.get('/', userAuth, adminAuth, (req, res) => {
+	let users = db.users.find();
+	res.status(200).send({ users });
+});
 
 router.post('/add-user', (req, res) => {
 	if (req.body.username && req.body.password && req.body.confirmpassword) {
