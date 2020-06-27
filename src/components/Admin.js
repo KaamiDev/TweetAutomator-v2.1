@@ -33,7 +33,7 @@ const Admin = () => {
 		<div style={{ display: users.length ? '' : 'none' }} className="content-section">
 			<AdminAccessCard users={users} />
 			<div className="profile-option-row">
-				<AdminAddAccess />
+				<AdminAddAccess setUsers={setUsers} />
 			</div>
 		</div>
 	);
