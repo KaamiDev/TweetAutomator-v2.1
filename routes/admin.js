@@ -29,4 +29,9 @@ router.post('/add-user', userAuth, adminAuth, (req, res) => {
 	}
 });
 
+router.post('/remove-user', userAuth, adminAuth, (req, res) => {
+	db.users.remove({ _id: req.body.userid });
+	res.send({ message: 'User removed successfully', newUsers: db.users.find() });
+});
+
 module.exports = router;
