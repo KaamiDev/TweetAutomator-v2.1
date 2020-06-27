@@ -9,16 +9,20 @@ router.get('/', userAuth, adminAuth, (req, res) => {
 });
 
 router.post('/add-user', (req, res) => {
-	if (req.body.username && req.body.password && req.body.confirmpassword) {
-		if (!db.accounts.findOne({ username: req.body.username.toLowerCase() })) {
-			let user = {
-				username: req.body.username.toLowerCase(),
-				password: req.body.password
-			};
-			db.users.save(user);
-			res.status(200).send('User added successfully.');
+	if (req.body.username && req.body.password && req.body.confirmPassword) {
+		if (req.body.password === req.body.confirmPassword) {
+			if (!db.accounts.findOne({ username: req.body.username.toLowerCase() })) {
+				let user = {
+					username: req.body.username.toLowerCase(),
+					password: req.body.password
+				};
+				db.users.save(user);
+				res.status(200).send('User added successfully.');
+			} else {
+				res.status(400).send('Username already exists.');
+			}
 		} else {
-			res.status(400).send('Username already exists.');
+			res.status(400).send('Confirm password does not match.');
 		}
 	} else {
 		res.status(400).send('Some fields are missing.');
