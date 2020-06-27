@@ -11,7 +11,7 @@ router.get('/', userAuth, adminAuth, (req, res) => {
 router.post('/add-user', (req, res) => {
 	if (req.body.username && req.body.password && req.body.confirmPassword) {
 		if (req.body.password === req.body.confirmPassword) {
-			if (!db.accounts.findOne({ username: req.body.username.toLowerCase() })) {
+			if (!db.users.findOne({ username: req.body.username.toLowerCase() })) {
 				let user = {
 					username: req.body.username.toLowerCase(),
 					password: req.body.password
