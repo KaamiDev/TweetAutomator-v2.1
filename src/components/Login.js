@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
@@ -8,6 +8,16 @@ const Login = () => {
 	const [ username, setUsername ] = useState('');
 	const [ password, setPassword ] = useState('');
 	const [ errMessage, setErrMessage ] = useState('');
+	const [ checkingLoggedIn, setCheckingLoggedIn ] = useState(true);
+
+	useEffect(() => {
+		if (localStorage.getItem('authtoken')) {
+			history.push('/');
+		} else {
+			setCheckingLoggedIn(false);
+		}
+		// eslint-disable-next-line
+	}, []);
 
 	const handleChange = (e) => {
 		setErrMessage('');
@@ -43,7 +53,7 @@ const Login = () => {
 	};
 
 	return (
-		<div className="content-section">
+		<div style={{ display: checkingLoggedIn ? 'none' : '' }} className="content-section">
 			<div className="login-card">
 				<h4 className="card-title">Authenticate Below.</h4>
 				<p style={{ fontSize: '12px', color: 'red' }}>{errMessage}</p>
