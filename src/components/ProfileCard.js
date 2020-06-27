@@ -19,7 +19,7 @@ const ProfileCard = (props) => {
 						{props.username}
 					</h4>
 					<p className="profile-description">
-						<p style={{ marginTop: 0, display: props.username === 'admin' ? 'none' : '' }}>User</p>
+						<span style={{ marginTop: 0, display: props.username === 'admin' ? 'none' : '' }}>User</span>
 						<Link
 							style={{ display: props.username === 'admin' ? '' : 'none' }}
 							className="yellow-link"

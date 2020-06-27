@@ -20,95 +20,99 @@ const AccountCard = () => {
 
 			<div className="accounts-table-container">
 				<table className="accounts-table">
-					<tr>
-						<th>Account</th>
-						<th>Status</th>
-						<th>Actions</th>
-					</tr>
-					<tr>
-						<td>@TeresaG51553675</td>
-						<td className="status-active">Active</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Refresh
-							</a>{' '}
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>@AshleyP30976152</td>
-						<td className="status-err">Locked</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Refresh
-							</a>{' '}
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>@RachelM50953750</td>
-						<td className="status-err">Suspended</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Refresh
-							</a>{' '}
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>@TeresaG51553675</td>
-						<td className="status-active">Active</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Refresh
-							</a>{' '}
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>@TeresaG51553675</td>
-						<td className="status-active">Active</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Refresh
-							</a>{' '}
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>@TeresaG51553675</td>
-						<td className="status-active">Active</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Refresh
-							</a>{' '}
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>@TeresaG51553675</td>
-						<td className="status-active">Active</td>
-						<td>
-							<a className="yellow-link" href="/">
-								Refresh
-							</a>{' '}
-							<a className="yellow-link" href="/">
-								Remove
-							</a>
-						</td>
-					</tr>
+					<thead>
+						<tr>
+							<th>Account</th>
+							<th>Status</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>@TeresaG51553675</td>
+							<td className="status-active">Active</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Refresh
+								</a>{' '}
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>@AshleyP30976152</td>
+							<td className="status-err">Locked</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Refresh
+								</a>{' '}
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>@RachelM50953750</td>
+							<td className="status-err">Suspended</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Refresh
+								</a>{' '}
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>@TeresaG51553675</td>
+							<td className="status-active">Active</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Refresh
+								</a>{' '}
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>@TeresaG51553675</td>
+							<td className="status-active">Active</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Refresh
+								</a>{' '}
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>@TeresaG51553675</td>
+							<td className="status-active">Active</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Refresh
+								</a>{' '}
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>@TeresaG51553675</td>
+							<td className="status-active">Active</td>
+							<td>
+								<a className="yellow-link" href="/">
+									Refresh
+								</a>{' '}
+								<a className="yellow-link" href="/">
+									Remove
+								</a>
+							</td>
+						</tr>
+					</tbody>
 				</table>
 				<a href="/" className="all-accs-link yellow-link">
 					Show all accounts...
