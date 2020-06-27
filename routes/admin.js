@@ -17,7 +17,7 @@ router.post('/add-user', (req, res) => {
 					password: req.body.password
 				};
 				db.users.save(user);
-				res.status(200).send('User added successfully.');
+				res.status(200).send({ message: 'User added successfully.', newUsers: db.users.find() });
 			} else {
 				res.status(400).send('Username already exists.');
 			}
