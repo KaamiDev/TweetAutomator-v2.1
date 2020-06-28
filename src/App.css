@@ -261,3 +261,7 @@ button:hover {
 .manage-access-description {
 	margin-bottom: 10px;
 }
+
+.account-btn-container {
+	display: inline;
+}

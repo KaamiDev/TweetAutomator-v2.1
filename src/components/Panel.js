@@ -10,6 +10,7 @@ const Panel = () => {
 
 	const [ username, setUsername ] = useState('');
 	const [ accounts, setAccounts ] = useState([]);
+	const [ keys, setKeys ] = useState({});
 
 	useEffect(() => {
 		const apiCall = async () => {
@@ -22,6 +23,7 @@ const Panel = () => {
 				if (response.status === 200) {
 					setUsername(response.data.username);
 					setAccounts(response.data.accounts);
+					setKeys(response.data.keys);
 				}
 			} catch (err) {
 				if (err.response.status === 401) {
@@ -35,7 +37,7 @@ const Panel = () => {
 
 	return (
 		<div className="content-section" style={{ display: username ? '' : 'none' }}>
-			<AccountCard accounts={accounts} />
+			<AccountCard keys={keys} accounts={accounts} />
 			<div className="profile-option-row">
 				<ProfileCard username={username} />
 				<OptionsCard accounts={accounts} />

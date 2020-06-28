@@ -1,6 +1,11 @@
 import React from 'react';
+import TwitterLogin from 'react-twitter-login';
 
 const AccountCard = (props) => {
+	const authHandler = (err, data) => {
+		console.log(data);
+	};
+
 	return (
 		<div className="accounts-card">
 			<h4 className="card-title manage-bot-title">Manage Bot Accounts</h4>
@@ -10,7 +15,14 @@ const AccountCard = (props) => {
 				<li>Locked - 1</li>
 			</ul>
 			<div className="account-buttons-container">
-				<button className="accounts-btn">Add Account</button>
+				<TwitterLogin
+					authCallback={authHandler}
+					consumerKey={props.keys.consumerKey}
+					consumerSecret={props.keys.consumerSecret}
+					callbackUrl={'http://127.0.0.1:3000/'}
+					className={'account-btn-container'}
+					children={<button className="accounts-btn">Add Account</button>}
+				/>
 				<button className="accounts-btn">Refresh Accounts</button>
 			</div>
 			<div className="search-container">
