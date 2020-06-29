@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import TwitterLogin from 'react-twitter-login';
 
 const AccountCard = (props) => {
@@ -6,6 +7,33 @@ const AccountCard = (props) => {
 		if (err) {
 			console.log(err);
 		} else {
+			const addAccount = async () => {
+				try {
+					let response = await axios.post(
+						'http://localhost:5000/panel/add-account',
+						{
+							username: data.screen_name,
+							accessToken: data.oauth_token,
+							accessSecret: oauth_token_secret
+						},
+						{
+							headers: {
+								authtoken: localStorage.getItem('authtoken')
+							}
+						}
+					);
+					if (response.status === 200) {
+						// response success
+					}
+				} catch (err) {
+					if (err.response.status === 401) {
+						history.push('/');
+					} else if (err.response.status === 400) {
+						// setErrMessage(err.response.data);
+					}
+				}
+			};
+			addAccount();
 			console.log(data);
 		}
 	};
