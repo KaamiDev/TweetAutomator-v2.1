@@ -9,6 +9,23 @@ const AccountCard = (props) => {
 	const [ errMessage, setErrMessage ] = useState('');
 	const [ successMessage, setSuccessMessage ] = useState('');
 
+	const accountsToDisplay = props.accounts.map((account) => {
+		return (
+			<tr key={account._id}>
+				<td>@{account.username}</td>
+				<td className="status-active">Active</td>
+				<td>
+					<a className="yellow-link" href="/">
+						Refresh
+					</a>{' '}
+					<a className="yellow-link" href="/">
+						Remove
+					</a>
+				</td>
+			</tr>
+		);
+	});
+
 	const authHandler = (err, data) => {
 		if (err) {
 			console.log(err);
@@ -83,7 +100,7 @@ const AccountCard = (props) => {
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						{/* <tr>
 							<td>@TeresaG51553675</td>
 							<td className="status-active">Active</td>
 							<td>
@@ -166,7 +183,8 @@ const AccountCard = (props) => {
 									Remove
 								</a>
 							</td>
-						</tr>
+						</tr> */}
+						{accountsToDisplay}
 					</tbody>
 				</table>
 				<a href="/" className="all-accs-link yellow-link">
