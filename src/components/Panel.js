@@ -37,7 +37,7 @@ const Panel = () => {
 
 	return (
 		<div className="content-section" style={{ display: username ? '' : 'none' }}>
-			<AccountCard keys={keys} accounts={accounts} />
+			<AccountCard keys={keys} accounts={accounts} setAccounts={setAccounts} />
 			<div className="profile-option-row">
 				<ProfileCard username={username} />
 				<OptionsCard accounts={accounts} />

@@ -46,8 +46,8 @@ const AccountCard = (props) => {
 						}
 					);
 					if (response.status === 200) {
-						console.log(response.data);
 						setSuccessMessage(response.data.message);
+						props.setAccounts(response.data.newAccounts);
 					}
 				} catch (err) {
 					if (err.response.status === 401) {
@@ -67,9 +67,9 @@ const AccountCard = (props) => {
 			<h4 className="card-title manage-bot-title">Manage Bot Accounts</h4>
 
 			<ul className="bot-stat-text">
-				<li>Active - 4</li>
-				<li>Suspended - 2</li>
-				<li>Locked - 1</li>
+				<li>Active - {props.accounts.length}</li>
+				<li>Suspended - 0</li>
+				<li>Locked - 0</li>
 			</ul>
 			<p style={{ fontSize: '12px', color: 'red' }}>{errMessage}</p>
 			<p style={{ fontSize: '12px', color: 'green' }}>{successMessage}</p>
