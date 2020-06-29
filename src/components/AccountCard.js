@@ -3,7 +3,11 @@ import TwitterLogin from 'react-twitter-login';
 
 const AccountCard = (props) => {
 	const authHandler = (err, data) => {
-		console.log(data);
+		if (err) {
+			console.log(err);
+		} else {
+			console.log(data);
+		}
 	};
 
 	return (
