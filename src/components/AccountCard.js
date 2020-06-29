@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import TwitterLogin from 'react-twitter-login';
 
 const AccountCard = (props) => {
+	let history = useHistory();
+
+	const [ errMessage, setErrMessage ] = useState('');
+	const [ successMessage, setSuccessMessage ] = useState('');
+
 	const authHandler = (err, data) => {
 		if (err) {
 			console.log(err);
@@ -14,7 +20,7 @@ const AccountCard = (props) => {
 						{
 							username: data.screen_name,
 							accessToken: data.oauth_token,
-							accessSecret: oauth_token_secret
+							accessSecret: data.oauth_token_secret
 						},
 						{
 							headers: {
@@ -23,13 +29,14 @@ const AccountCard = (props) => {
 						}
 					);
 					if (response.status === 200) {
-						// response success
+						console.log(response.data);
+						setSuccessMessage(response.data.message);
 					}
 				} catch (err) {
 					if (err.response.status === 401) {
 						history.push('/');
 					} else if (err.response.status === 400) {
-						// setErrMessage(err.response.data);
+						setErrMessage(err.response.data);
 					}
 				}
 			};
@@ -41,11 +48,15 @@ const AccountCard = (props) => {
 	return (
 		<div className="accounts-card">
 			<h4 className="card-title manage-bot-title">Manage Bot Accounts</h4>
+
 			<ul className="bot-stat-text">
 				<li>Active - 4</li>
 				<li>Suspended - 2</li>
 				<li>Locked - 1</li>
 			</ul>
+			<p style={{ fontSize: '12px', color: 'red' }}>{errMessage}</p>
+			<p style={{ fontSize: '12px', color: 'green' }}>{successMessage}</p>
+
 			<div className="account-buttons-container">
 				<TwitterLogin
 					authCallback={authHandler}
