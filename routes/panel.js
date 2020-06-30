@@ -28,4 +28,14 @@ router.post('/add-account', userAuth, (req, res) => {
 	}
 });
 
+router.post('/remove-account', userAuth, (req, res) => {
+	if (req.body.accountId) {
+		db.accounts.remove({ _id: req.body.accountId });
+		let accounts = db.accounts.find();
+		res.status(200).send({ message: 'Account removed successfully', newAccounts: accounts });
+	} else {
+		res.status(400).send('Some fields are missing.');
+	}
+});
+
 module.exports = router;
