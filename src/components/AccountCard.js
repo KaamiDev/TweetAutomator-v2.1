@@ -38,6 +38,7 @@ const AccountCard = (props) => {
 				}
 			}
 		};
+		removeAccount();
 	};
 
 	const accountsToDisplay = props.accounts.map((account) => {
