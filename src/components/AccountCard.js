@@ -45,7 +45,10 @@ const AccountCard = (props) => {
 		return (
 			<tr key={account._id}>
 				<td>@{account.username}</td>
-				<td className="status-active" style={{ textTransform: 'capitalize' }}>
+				<td
+					className={`status-${account.status === 'active' ? 'active' : 'err'}`}
+					style={{ textTransform: 'capitalize' }}
+				>
 					{account.status}
 				</td>
 				<td>
