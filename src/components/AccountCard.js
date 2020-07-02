@@ -106,9 +106,9 @@ const AccountCard = (props) => {
 			<h4 className="card-title manage-bot-title">Manage Bot Accounts</h4>
 
 			<ul className="bot-stat-text">
-				<li>Active - {props.accounts.length}</li>
-				<li>Suspended - 0</li>
-				<li>Locked - 0</li>
+				<li>Active - {props.accounts.filter((account) => account.status === 'active').length}</li>
+				<li>Suspended - {props.accounts.filter((account) => account.status === 'suspended').length}</li>
+				<li>Locked - {props.accounts.filter((account) => account.status === 'locked').length}</li>
 			</ul>
 			<p style={{ fontSize: '12px', color: 'red' }}>{errMessage}</p>
 			<p style={{ fontSize: '12px', color: 'green' }}>{successMessage}</p>
