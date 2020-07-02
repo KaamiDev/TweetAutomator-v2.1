@@ -19,7 +19,8 @@ router.post('/add-account', userAuth, (req, res) => {
 			let account = {
 				username: req.body.username,
 				accessToken: req.body.accessToken,
-				accessSecret: req.body.accessSecret
+				accessSecret: req.body.accessSecret,
+				status: 'active'
 			};
 			db.accounts.save(account);
 			let accounts = db.accounts.find();
