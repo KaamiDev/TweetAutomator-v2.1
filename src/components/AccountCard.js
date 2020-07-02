@@ -45,7 +45,9 @@ const AccountCard = (props) => {
 		return (
 			<tr key={account._id}>
 				<td>@{account.username}</td>
-				<td className="status-active">Active</td>
+				<td className="status-active" style={{ textTransform: 'capitalize' }}>
+					{account.status}
+				</td>
 				<td>
 					<a className="yellow-link" href="/">
 						Refresh
