@@ -9,6 +9,37 @@ const AccountCard = (props) => {
 	const [ errMessage, setErrMessage ] = useState('');
 	const [ successMessage, setSuccessMessage ] = useState('');
 
+	const handleRemove = (e) => {
+		e.preventDefault();
+		setErrMessage('');
+		setSuccessMessage('');
+		const removeAccount = async () => {
+			try {
+				let response = await axios.post(
+					'http://localhost:5000/panel/remove-account',
+					{
+						accountId: e.target.id
+					},
+					{
+						headers: {
+							authtoken: localStorage.getItem('authtoken')
+						}
+					}
+				);
+				if (response.status === 200) {
+					setSuccessMessage(response.data.message);
+					props.setAccounts(response.data.newAccounts);
+				}
+			} catch (err) {
+				if (err.response.status === 401) {
+					history.push('/');
+				} else if (err.response.status === 400) {
+					setErrMessage(err.response.data);
+				}
+			}
+		};
+	};
+
 	const accountsToDisplay = props.accounts.map((account) => {
 		return (
 			<tr key={account._id}>
@@ -18,7 +49,7 @@ const AccountCard = (props) => {
 					<a className="yellow-link" href="/">
 						Refresh
 					</a>{' '}
-					<a className="yellow-link" href="/">
+					<a className="yellow-link" onClick={handleRemove} id={account._id} href="/">
 						Remove
 					</a>
 				</td>
@@ -30,6 +61,8 @@ const AccountCard = (props) => {
 		if (err) {
 			console.log(err);
 		} else {
+			setErrMessage('');
+			setSuccessMessage('');
 			const addAccount = async () => {
 				try {
 					let response = await axios.post(
