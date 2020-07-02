@@ -15,14 +15,18 @@ router.get('/', userAuth, (req, res) => {
 
 router.post('/add-account', userAuth, (req, res) => {
 	if (req.body.accessToken && req.body.accessSecret && req.body.username) {
-		let account = {
-			username: req.body.username,
-			accessToken: req.body.accessToken,
-			accessSecret: req.body.accessSecret
-		};
-		db.accounts.save(account);
-		let accounts = db.accounts.find();
-		res.status(200).send({ message: 'Account added successfully', newAccounts: accounts });
+		if (!db.accounts.findOne({ username: req.body.username })) {
+			let account = {
+				username: req.body.username,
+				accessToken: req.body.accessToken,
+				accessSecret: req.body.accessSecret
+			};
+			db.accounts.save(account);
+			let accounts = db.accounts.find();
+			res.status(200).send({ message: 'Account added successfully', newAccounts: accounts });
+		} else {
+			res.status(400).send('Account has already been added.');
+		}
 	} else {
 		res.status(400).send('Some fields are missing.');
 	}
