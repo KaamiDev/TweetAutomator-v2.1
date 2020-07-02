@@ -140,9 +140,6 @@ const AccountCard = (props) => {
 					</thead>
 					<tbody>{accountsToDisplay}</tbody>
 				</table>
-				<a href="/" className="all-accs-link yellow-link">
-					Show all accounts...
-				</a>
 			</div>
 		</div>
 	);
