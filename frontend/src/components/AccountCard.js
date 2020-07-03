@@ -97,7 +97,6 @@ const AccountCard = (props) => {
 				}
 			};
 			addAccount();
-			console.log(data);
 		}
 	};
 
