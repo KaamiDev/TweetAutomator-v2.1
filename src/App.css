@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+	background-color: #292929;
+	font-family: 'Arvo', serif;
+	color: #0aff02;
+}
+
+#header {
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+#header-title {
+	font-size: 40px;
+	margin-bottom: 5px;
+}
+
+#header-title span {
+	font-style: italic;
+}
+
+#header-subtitle {
+	font-weight: normal;
+	margin-top: 0;
+}
+
+.login-card {
+	background-color: #313131;
+	width: 20%;
+	margin: 0 auto;
+	padding: 30px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+.card-title {
+	font-weight: normal;
+	font-size: 15px;
+	margin-top: 0;
+}
+
+input {
+	border: 3px solid #0aff02;
+	outline: none;
+	text-align: center;
+	padding: 5px;
+	display: block;
+	background-color: transparent;
+	margin: 10px auto;
+	width: 92%;
+	font-family: 'Arvo', serif;
+	color: #b1faaf;
+}
+
+button {
+	background-color: transparent;
+	outline: none;
+	border: 3px solid #0aff02;
+	padding: 5px 40px;
+	color: #0aff02;
+	border-radius: 25px;
+	font-family: 'Arvo', serif;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #76fd712f;
+}
+
+.login-btn {
+	margin-top: 12px;
+}
+
+#footer-text {
+	text-align: center;
+}
+
+.footer-link {
+	color: #0aff02;
+}
+
+.content-section {
+	min-height: calc(100vh - 300px);
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding-bottom: 30px;
+}
+
+::placeholder {
+	color: #0aff024f;
+}
+
+#header-title a {
+	color: #0aff02;
+	text-decoration: none;
+}
+
+.accounts-card {
+	background-color: #313131;
+	margin-right: 40px;
+	width: 40%;
+	padding: 30px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.profile-option-row {
+	margin-right: 40px;
+	width: 23%;
+}
+
+.profile-card {
+	margin-bottom: 20px;
+	background-color: #313131;
+	padding: 30px;
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	vertical-align: middle;
+}
+
+.options-card {
+	background-color: #313131;
+	padding: 30px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.bot-stat-text {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin-top: 5px;
+}
+
+.bot-stat-text li {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 12px;
+}
+
+.manage-bot-title {
+	margin-bottom: 0;
+}
+
+.accounts-btn {
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-right: 5px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.accounts-search {
+	text-align: left;
+	margin: 0;
+	margin-right: 10px;
+	padding-left: 15px;
+	width: 50%;
+}
+
+.search-container {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.account-buttons-container {
+	margin-bottom: 20px;
+}
+
+.accounts-table-container {
+	padding-top: 20px;
+}
+
+.accounts-table {
+	width: 100%;
+}
+
+.accounts-table tr,
+.accounts-table td,
+.accounts-table th {
+	outline: 3px solid #0aff02;
+	padding: 5px;
+}
+
+.accounts-table th {
+	padding: 10px;
+}
+
+.yellow-link {
+	color: #a9ff02;
+}
+
+.status-active {
+	color: #0aff02;
+}
+
+.status-err {
+	color: #ffd702;
+}
+
+.all-accs-link {
+	margin-top: 25px;
+	display: block;
+}
+
+.profile-image {
+	width: 40px;
+}
+
+.user-text-container {
+	margin-left: 10px;
+	padding-top: 3px;
+}
+
+.profile-username {
+	margin-bottom: 2px;
+}
+
+.profile-description {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 12px;
+}
+
+.profile-stuff-container {
+	display: flex;
+}
+
+.logout-btn {
+	font-size: 12px;
+	margin-top: 6px;
+}
+
+.option-btn-containers {
+	margin-bottom: 10px;
+}
+
+.option-btn {
+	width: 70px;
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 0;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+.option-btn-containers .active {
+	color: #a9ff02;
+	border-color: #a9ff02;
+	font-weight: bold;
+}
+
+.manage-access-description {
+	margin-bottom: 10px;
+}
+
+.account-btn-container {
+	display: inline;
+}
