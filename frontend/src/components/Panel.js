@@ -27,6 +27,7 @@ const Panel = () => {
 				}
 			} catch (err) {
 				if (err.response.status === 401) {
+					localStorage.clear();
 					history.push('/login');
 				}
 			}
