@@ -1,0 +1,4 @@
+node_modules
+database/DB/accounts.json
+database/DB/users.json
+.env
