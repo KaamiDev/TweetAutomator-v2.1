@@ -20,6 +20,9 @@ const OptionsCard = () => {
 				<button onClick={handleClick} className={`option-btn ${selectedOption === 'Follow' ? 'active' : ''}`}>
 					Follow
 				</button>
+				<button onClick={handleClick} className={`option-btn ${selectedOption === 'Report' ? 'active' : ''}`}>
+					Report
+				</button>
 			</div>
 			<input type="number" placeholder="# of Bots (max: 4)" min="1" max="4" autoComplete="off" id="username" />
 			<input
